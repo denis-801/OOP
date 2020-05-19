@@ -1,40 +1,25 @@
 public abstract class Vehicle{
-
-	// attributes
-
 	String fueltype;
-
-	
-
 	public void accelerate(int speed){
-
 		System.out.println("Vehicle accelerates by: "+speed);
-
 	};
-
 	public abstract void stop();
-
-	public abstract void gas();
-
 	
+	public abstract void gas();
 
 	public static void main(String[] args){
 
 		Sedan car = new Sedan();
-
 		car.accelerate(4);//Overidden
-
 		car.accelerate(4.0);//Overloaded
 
 	}
 
 }
 
+interface Automobile{ 
 
-
-interface Automobile{ // an interface cannot extend a class
-
-	int doors=5; // attributes in interfaces are public, static, final
+	int doors=5;
     int sittingcapacity=5;
 	int enginecap=1500;
 	
@@ -42,45 +27,29 @@ interface Automobile{ // an interface cannot extend a class
     public void move();
 }
 
-
-
 class Sedan extends Vehicle implements Automobile{
-
 	
-
-	@Override
-
 	public void accelerate(int speed{
 
 		System.out.println("Sedan accelerates by: "+speed);
-
 	}
-
 	
-
 	public void accelerate(double speed){//for overloading
 
 		System.out.println("The sedan's new speed is"+speed);
-
 	}
-
 	
-
 	public void stop(){
 
 	System.out.println("Sedan stop");
 
 	}
-
 	
-
 	public void gas(){
 
 		System.out.println("Sedan gas");
 
 	}
-
-	
 
 	public boolean airconditioner(){
 
@@ -90,38 +59,25 @@ class Sedan extends Vehicle implements Automobile{
 
 }
 
-
-
 class SportsCar extends Vehicle implements Automobile{
-
-
 
 	public void stop(){
 
 	System.out.println("SportsCar stop");
 
 	}
-
-	
-
 	public void gas(){
 
 		System.out.println("SportsCar gas");
 
 	}
 
-	
-
 	public boolean airconditioner(){
 
 		return false;
-
 	}
 
 }
-
-
-
 class Motorcycle extends Vehicle{
 
 	public void stop(){
@@ -130,8 +86,6 @@ class Motorcycle extends Vehicle{
 
 	}
 
-	
-
 	public void gas(){
 
 		System.out.println("Motorcycle gas");
@@ -139,9 +93,6 @@ class Motorcycle extends Vehicle{
 	}
 
 }
-
- 
-
  class Bus extends Vehicle{
 
 	public void stop(){
@@ -149,8 +100,6 @@ class Motorcycle extends Vehicle{
 	System.out.println("Bus stops");
 
 	}
-
-	
 
 	public void gas(){
 
@@ -160,14 +109,9 @@ class Motorcycle extends Vehicle{
 
  }
 
- 
-
  class LuxuryBus extends Bus{
 
  }
-
- 
-
  class SchoolBus extends Bus{
 
  }
