@@ -1,0 +1,13 @@
+1)set PATH_TO_FX="path\to\javafx-sdk-13\lib" (Recognize a java fx project)
+
+2)javac --module-path %PATH_TO_FX% --add-modules javafx.controls *.java (Run all classes)
+
+3)java --module-path %PATH_TO_FX% --add-modules javafx.controls HelloFX(Run a specific class)
+
+4)start rmiregistry (start)
+
+5)C:\Program Files\Java\openjfx-12.0.2_windows-x64_bin-sdk\javafx-sdk-12.0.2\lib(javafx path)
+
+6)java Server(run the server)
+
+7)java client(run what's in the server)
